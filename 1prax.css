@@ -1,0 +1,7 @@
+H1 {text-align: center; 
+	color: blue;}
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+.indent { margin-right: 5%; margin-left: 5% }
