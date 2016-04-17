@@ -1,0 +1,11 @@
+<?php
+$tulemus="";
+if(isset($_POST['pilt'])){
+	$tulemus = $_POST['pilt'];
+}
+if (empty($_POST['pilt'])){
+	$tulemus = "Pilt pole valitud, valige midagi!";
+}
+?>
+<h3>Valiku tulemus</h3>
+<p>Hääletasid pildi nr: <?php echo $tulemus ;?> poolt</p>
