@@ -1,0 +1,20 @@
+<?php
+//$tulemus="";
+if(isset($_POST['pilt'])){
+	$_SESSION['voted_for'] = $_POST['pilt'];
+}
+if (empty($_SESSION['voted_for'])){
+	echo "Pilt pole valitud, valige midagi!";
+}
+?>
+<h3>Valiku tulemus</h3>
+<p>Hääletasid pildi nr <?php if(!empty($_SESSION['voted_for'])) {echo $_SESSION['voted_for'];}?> poolt</p>
+
+<form method="post" action="?page=tulemus">
+	<input type="submit" name="lopeta" value="Lõpeta sessioon">
+</form>
+<?php
+if (isset($_POST['lopeta'])){
+	$_SESSION = array();
+}
+?>
