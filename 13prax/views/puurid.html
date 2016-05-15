@@ -1,0 +1,11 @@
+<div>
+	<?php if (!empty($puur)){
+		foreach($puur [$puur_nr] as $loom){
+			if( $loom == $puur[$puur_nr][0]){
+	?>
+	<h1>Puuris number <?php echo $loom['puur'];?> on järgmised loomad:<?php } ?></h1> <hr>
+		<img src="<?php echo $loom['liik'];?>"> 
+		<p style="display:inline"> - mina olen <?php echo $loom['nimi']?></p>
+	<?php
+	}}?>
+</div>
